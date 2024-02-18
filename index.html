@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <title>Color Changing Button</title>                         <!--CSS to Javascript-->
+  <style>
+    .color-button {
+      padding: 10px 20px;
+      background-color: blue;
+      color: green;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+  </style>
+
+        <h2>Change CSS based on Variable Value</h2>                       <!--Change CSS based on Variable Value-->
+     <style>
+        .colored-div {
+      width: 200px;
+      height: 200px;
+        }
+
+     </style>   
+
+</head>
+<body>
+    <h2>JavaScript While Loop</h2>        <!--While Loop-->
+
+    <p id="demo"></p> 
+
+    <script>
+const donuts = ["Regular Glazed", "Chocolate Glazed", "Maple Glazed", "Strawberry Glazed", "Chocolate Glazed with Sprinkles"];  
+    let i = 0;
+    let text = "";
+    while (donuts[i]) {
+      text += donuts [i] + "<br>" ;
+      i++;
+    }
+    document.getElementById("demo").innerHTML = text;
+
+    </script>
+
+
+<button id="colorButton" class="color-button">Change Color</button>                           <!--CSS to Javascript-->
+
+<script>
+  const colorButton = document.getElementById("colorButton");
+
+  colorButton.addEventListener("click", function() {
+    if (colorButton.style.backgroundColor === "blue") {
+      colorButton.style.backgroundColor = "green";
+    } else {
+      colorButton.style.backgroundColor = "blue";
+    }
+  });
+</script>
+
+<div id="coloredDiv" class="colored-div">Colored Div</div>           <!--Change CSS based on Variable Value-->
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    let isGreen = false;
+
+    function changeColor() {
+      const coloredDiv = document.getElementById("coloredDiv");
+
+      if (isGreen) {
+        coloredDiv.style.backgroundColor = "blue";
+      } else {
+        coloredDiv.style.backgroundColor = "green";
+      }
+
+                        //Toggle Change Color Button
+      isGreen = !isGreen;
+    }
+  </script>
+
+    
+    <script src="./app.js"></script>
+
+    
+</body>
+</html>
